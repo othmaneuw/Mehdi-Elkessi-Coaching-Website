@@ -1,0 +1,17 @@
+/* =========================
+   VARIABLES
+========================= */
+
+:root {
+  --background-color: #101114;
+  --primary-color: #1c1d20;
+  --secondary-color: #4a4d57;
+  --accent-color: #f4f3ee;
+  --text-color: #f9f9f9;
+
+  --border-radius: 5px;
+
+  --transition: 0.3s ease;
+
+  --page-padding: 40px;
+}

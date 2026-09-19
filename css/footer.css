@@ -1,0 +1,209 @@
+footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    gap: 50px;
+
+    padding: 80px var(--page-padding);
+
+    background-color: var(--secondary-color);
+}
+
+/* =========================
+   FOOTER TITLE
+========================= */
+
+.footer-title {
+    color: var(--text-color);
+
+    font-size: 1.5rem;
+}
+
+/* =========================
+   CONTACT
+========================= */
+
+.footer-contact {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    gap: 15px;
+}
+
+.footer-contact h5 {
+    margin: 0;
+
+    font-family: "Montserrat", sans-serif;
+    font-size: 0.75rem;
+    letter-spacing: 3px;
+}
+
+.footer-contact a {
+    color: var(--text-color);
+}
+
+.email {
+    font-family: "Montserrat", sans-serif;
+    font-size: 0.9rem;
+}
+
+/* =========================
+   SOCIAL LINKS
+========================= */
+
+.social-links {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 20px;
+}
+
+/* =========================
+   SOCIAL ICONS
+========================= */
+
+.instagram,
+.whatsapp {
+    position: relative;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.instagram svg,
+.whatsapp svg {
+    width: 40px;
+
+    fill: var(--text-color);
+
+    transition: transform var(--transition);
+}
+
+.instagram:hover svg,
+.whatsapp:hover svg {
+    transform: scale(1.1);
+}
+
+/* =========================
+   TOOLTIP
+========================= */
+
+.instagram::before,
+.whatsapp::before {
+    content: attr(data-social);
+
+    position: absolute;
+    bottom: 55px;
+
+    padding: 0.5em 1em;
+
+    background-color: var(--primary-color);
+    color: white;
+
+    border-radius: 100px;
+
+    opacity: 0;
+
+    transform: translateY(10px);
+
+    pointer-events: none;
+
+    white-space: nowrap;
+
+    font-family: "Montserrat", sans-serif;
+    font-size: 0.75rem;
+
+    transition:
+        opacity var(--transition),
+        transform var(--transition);
+}
+
+.instagram::after,
+.whatsapp::after {
+    content: "";
+
+    position: absolute;
+    bottom: 45px;
+
+    border-left: 8px solid transparent;
+    border-right: 8px solid transparent;
+    border-top: 10px solid var(--primary-color);
+
+    opacity: 0;
+
+    pointer-events: none;
+
+    transition: opacity var(--transition);
+}
+
+/* Show tooltip */
+
+.instagram:hover::before,
+.instagram:hover::after,
+.whatsapp:hover::before,
+.whatsapp:hover::after {
+    opacity: 1;
+}
+
+.instagram:hover::before,
+.whatsapp:hover::before {
+    transform: translateY(0);
+}
+
+/* =========================
+   TABLET
+========================= */
+
+@media (max-width: 1024px) {
+
+    footer {
+        padding: 70px var(--page-padding);
+    }
+
+}
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 768px) {
+
+    footer {
+        flex-direction: column;
+
+        text-align: center;
+
+        gap: 35px;
+
+        padding: 60px 20px;
+    }
+
+}
+
+/* =========================
+   SMALL MOBILE
+========================= */
+
+@media (max-width: 480px) {
+
+    .footer-title {
+        font-size: 1.2rem;
+    }
+
+    .email {
+        font-size: 0.8rem;
+    }
+
+    .social-links {
+        gap: 18px;
+    }
+
+    .instagram svg,
+    .whatsapp svg {
+        width: 36px;
+    }
+
+}

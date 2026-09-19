@@ -1,0 +1,431 @@
+/* =========================
+   BUTTONS
+========================= */
+
+.btn-option {
+  border: none;
+  outline: none;
+
+  padding: 14px 30px;
+
+  background-color: var(--secondary-color);
+  color: var(--text-color);
+
+  border-radius: 3px;
+
+  font-family: inherit;
+  font-size: 1rem;
+
+  cursor: pointer;
+
+  transition:
+    background-color var(--transition),
+    color var(--transition),
+    transform var(--transition);
+}
+
+.btn-option:hover {
+  background-color: var(--accent-color);
+  color: var(--primary-color);
+
+  transform: translateY(-3px);
+}
+
+/* =========================
+   PRESENTATION / HERO
+========================= */
+
+.presentation {
+  min-height: 520px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  padding: 80px var(--page-padding);
+
+  color: var(--text-color);
+
+  background-image:
+    linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.55)),
+    url("../imgs/Lunges_pic.png");
+
+  background-size: cover;
+  background-position: top center;
+}
+
+.presentation h1 {
+  font-size: clamp(2rem, 5vw, 2.5rem);
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.presentation p {
+  max-width: 700px;
+
+  margin-top: 30px;
+
+  font-size: 1rem;
+  line-height: 1.7;
+}
+
+.button-options {
+  margin-top: 35px;
+}
+
+/* =========================
+   WHO AM I
+========================= */
+
+.whoamI {
+  padding: 80px var(--page-padding);
+
+  text-align: center;
+}
+
+.whoamI h2 {
+  color: var(--accent-color);
+
+  font-size: clamp(2rem, 5vw, 2.5rem);
+}
+
+.whoamI p {
+  max-width: 1000px;
+
+  margin: 30px auto 0;
+
+  font-size: 1rem;
+  line-height: 1.8;
+}
+
+.special {
+  color: var(--accent-color);
+  font-weight: bold;
+}
+
+/* =========================
+   PARCOURS
+========================= */
+
+.parcours-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 50px;
+
+  padding: 80px var(--page-padding);
+
+  background-color: var(--secondary-color);
+}
+
+.parcours {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  text-align: center;
+}
+
+.parcours h2 {
+  color: var(--accent-color);
+
+  font-size: clamp(2rem, 5vw, 3rem);
+  font-weight: 600;
+}
+
+.parcours p {
+  margin-top: 30px;
+
+  font-size: 1rem;
+  line-height: 1.7;
+}
+
+.parcours button {
+  margin-top: 40px;
+
+  background-color: var(--primary-color);
+}
+
+.parcours-img-container {
+  min-height: 500px;
+}
+
+.parcours-img-container img {
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+
+  border-radius: var(--border-radius);
+}
+
+/* =========================
+   VISION
+========================= */
+
+.vision-container {
+  padding: 80px var(--page-padding);
+
+  text-align: center;
+}
+
+.vision-container h2 {
+  color: var(--accent-color);
+
+  font-size: clamp(2rem, 5vw, 2.5rem);
+}
+
+.vision {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+
+  margin-top: 50px;
+}
+
+.vision-child {
+  min-height: 400px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background-position: center;
+  background-size: cover;
+
+  border-radius: var(--border-radius);
+
+  cursor: pointer;
+
+  transition:
+    transform var(--transition),
+    box-shadow var(--transition);
+}
+
+.vision-child:hover {
+  transform: translateY(-15px);
+}
+
+/* Overlay for vision images */
+
+.vision-child:nth-child(1) {
+  background-image:
+    linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.55)),
+    url("./imgs/IMG_1568.JPG");
+}
+
+.vision-child:nth-child(2) {
+  background-image:
+    linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.55)),
+    url("../imgs/mehdi1.jpg");
+}
+
+.vision-child:nth-child(3) {
+  background-image:
+    linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.55)),
+    url("../imgs/hyrox3.jpg");
+}
+
+.vision-child:nth-child(4) {
+  background-image:
+    linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.55)),
+    url("../imgs/hyrox4.jpg");
+}
+
+.vision-child h3 {
+  padding: 20px;
+
+  color: var(--text-color);
+
+  font-size: 1.3rem;
+  text-transform: uppercase;
+}
+
+/* =========================
+   COACHER SECTION
+========================= */
+
+.coacher {
+  min-height: 700px;
+  padding: 100px 10%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background-image:
+    linear-gradient(rgba(16, 17, 20, 0.7), rgba(16, 17, 20, 0.85)),
+    url("../imgs/mehdi3.png");
+
+  background-size: cover;
+  background-position: center;
+}
+
+.coacher-content {
+  width: 100%;
+  max-width: 900px;
+  text-align: center;
+}
+
+.coacher h3 {
+  font-size: clamp(2rem, 5vw, 4rem);
+  margin-bottom: 50px;
+}
+
+.coacher-text {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.coacher-text p {
+  font-size: clamp(1rem, 1.5vw, 1.2rem);
+  line-height: 1.8;
+  margin-bottom: 25px;
+}
+
+.coacher-values {
+  margin-top: 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.coacher-values span {
+  font-size: clamp(1.1rem, 2vw, 1.5rem);
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+
+
+/* =========================
+   TABLET / MEDIUM SCREENS
+   1024px and below
+========================= */
+
+@media (max-width: 1024px) {
+  :root {
+    --page-padding: 30px;
+  }
+
+
+  /* Parcours */
+
+  .parcours-container {
+    grid-template-columns: 1fr;
+
+    gap: 50px;
+  }
+
+  .parcours-img-container {
+    min-height: 450px;
+  }
+
+  /* Vision */
+
+  .vision {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .vision-child {
+    min-height: 350px;
+  }
+}
+
+/* =========================
+   MOBILE / SMALL SCREENS
+   768px and below
+========================= */
+
+@media (max-width: 768px) {
+  :root {
+    --page-padding: 20px;
+  }
+
+  
+  /* Hero */
+
+  .presentation {
+    min-height: 500px;
+
+    padding: 60px 20px;
+
+    text-align: center;
+
+    background-position: center;
+  }
+
+  .presentation p {
+    font-size: 0.9rem;
+  }
+
+  /* Who am I */
+
+  .whoamI {
+    padding: 60px 20px;
+  }
+
+  .whoamI p {
+    font-size: 0.9rem;
+  }
+
+  /* Parcours */
+
+  .parcours-container {
+    padding: 60px 20px;
+  }
+
+  .parcours p {
+    font-size: 0.9rem;
+  }
+
+  .parcours-img-container {
+    min-height: 400px;
+  }
+
+  /* Vision */
+
+  .vision-container {
+    padding: 60px 20px;
+  }
+
+  .vision {
+    grid-template-columns: 1fr;
+  }
+
+  .vision-child {
+    min-height: 350px;
+  }
+
+  
+}
+
+/* =========================
+   VERY SMALL SCREENS
+   480px and below
+========================= */
+
+@media (max-width: 480px) {
+  
+  .presentation h1 {
+    font-size: 2rem;
+  }
+
+  .presentation {
+    min-height: 450px;
+  }
+
+  .btn-option {
+    width: 100%;
+
+    font-size: 0.85rem;
+  }
+
+  .parcours-img-container {
+    min-height: 300px;
+  }
+
+  .vision-child {
+    min-height: 300px;
+  }
+
+  
+}
