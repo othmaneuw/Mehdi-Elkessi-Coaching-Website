@@ -100,7 +100,8 @@
 
 .special {
   color: var(--accent-color);
-  font-weight: bold;
+  font-weight: bolder;
+  margin-top: 10px;
 }
 
 /* =========================
