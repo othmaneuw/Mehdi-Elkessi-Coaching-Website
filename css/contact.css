@@ -19,7 +19,7 @@
 
   background-image:
     linear-gradient(rgba(16, 17, 20, 0.65), rgba(16, 17, 20, 0.92)),
-    url("../imgs/Lunges_pic.png");
+    url("../imgs/mehdi9.png");
 
   background-size: cover;
   background-position: center;
@@ -33,7 +33,7 @@
 .contact-hero h1 {
   margin-bottom: 35px;
 
-  font-size: clamp(3rem, 8vw, 6rem);
+  font-size: clamp(3rem, 4vw, 4rem);
   line-height: 1.05;
   letter-spacing: 2px;
 }
@@ -53,12 +53,7 @@
 }
 
 .contact-hero a {
-    color: var(--text-color);
-}
-
-.contact-hero button{
-   border: none;
-  outline: none;
+  display: inline-block;
 
   padding: 14px 30px;
 
@@ -70,21 +65,66 @@
   font-family: inherit;
   font-size: 1rem;
 
+  text-decoration: none;
+
   cursor: pointer;
 
   transition:
     background-color var(--transition),
     color var(--transition),
     transform var(--transition);
-  
 }
 
-.contact-hero button:hover{
-     background-color: var(--accent-color);
+.contact-hero a:hover {
+  background-color: var(--accent-color);
   color: var(--primary-color);
 
   transform: translateY(-3px);
 }
+
+/* =========================================================
+   VALIDATION ERRORS
+========================================================= */
+
+.field-error {
+  display: none;
+
+  margin-top: 8px;
+
+  color: #ff4d4d;
+
+  font-family: "Montserrat", sans-serif;
+  font-size: 0.75rem;
+  font-weight: 500;
+
+  line-height: 1.5;
+}
+
+.form-group.error .field-error {
+  display: block;
+}
+
+.form-group.error input,
+.form-group.error textarea {
+  border-color: #ff4d4d;
+}
+
+.form-group.error input:focus,
+.form-group.error textarea:focus {
+  border-color: #ff4d4d;
+  background-color: #15161a;
+}
+
+/* Radio buttons */
+
+.form-group.error .radio-option span {
+  border-color: #ff4d4d;
+}
+
+.form-group.error .radio-options {
+  margin-bottom: 0;
+}
+
 
 /* =========================================================
    QUESTIONNAIRE
@@ -94,7 +134,7 @@
   padding: 120px var(--page-padding);
   background-image:
     linear-gradient(rgba(16, 17, 20, 0.82), rgba(16, 17, 20, 0.92)),
-    url("../imgs/mehdi3.png");
+    url("../imgs/mehdi10.JPG");
   background-size: cover;
   background-position: center;
   /* background-attachment: fixed; */
@@ -412,6 +452,20 @@ textarea:focus {
   margin-left: 10px;
 }
 
+.submitted{
+  display: none;
+
+  margin-top: 80px;
+
+  color: var(--accent-color);
+
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.5rem;
+  font-weight: bold;
+
+  line-height: 1.5;
+}
+
 /* =========================================================
    FINAL SECTION
 ========================================================= */
@@ -429,7 +483,7 @@ textarea:focus {
 
   background-image:
     linear-gradient(rgba(16, 17, 20, 0.75), rgba(16, 17, 20, 0.93)),
-    url("../imgs/mehdi3.png");
+    url("../imgs/mehdi11.png");
 
   background-size: cover;
   background-position: center;
@@ -460,6 +514,178 @@ textarea:focus {
   line-height: 1.8;
 }
 
+/* =========================
+   TESTIMONIALS / REVIEWS
+========================= */
+
+.testimonials {
+  padding: 100px var(--page-padding);
+
+  background-color: var(--primary-color);
+
+  text-align: center;
+
+  overflow: hidden;
+}
+
+.testimonials-header {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.section-label {
+  display: block;
+
+  margin-bottom: 15px;
+
+  color: var(--accent-color);
+
+  font-size: 0.85rem;
+  font-weight: bold;
+
+  letter-spacing: 3px;
+}
+
+.testimonials-header h2 {
+  margin: 0;
+
+  color: var(--text-color);
+
+  font-size: clamp(2rem, 5vw, 3rem);
+}
+
+.testimonials-header p {
+  max-width: 650px;
+
+  margin: 25px auto 0;
+
+  color: var(--text-color);
+
+  font-size: 1rem;
+  line-height: 1.7;
+
+  opacity: 0.8;
+}
+
+/* =========================
+   CAROUSEL
+========================= */
+
+.testimonials-carousel {
+  position: relative;
+
+  display: flex;
+  align-items: center;
+
+  max-width: 1200px;
+
+  margin: 60px auto 0;
+}
+
+.testimonials-track {
+  width: 100%;
+
+  display: flex;
+
+  gap: 25px;
+
+  overflow-x: auto;
+
+  scroll-behavior: smooth;
+
+  scroll-snap-type: x mandatory;
+
+  scrollbar-width: none;
+
+  padding: 10px 5px 25px;
+}
+
+.testimonials-track::-webkit-scrollbar {
+  display: none;
+}
+
+/* =========================
+   REVIEW IMAGE BOX
+========================= */
+
+.testimonial-card {
+  flex: 0 0 calc(33.333% - 17px);
+
+  background-color: var(--primary-color);
+
+  border-radius: var(--border-radius);
+
+  overflow: hidden;
+
+  scroll-snap-align: center;
+
+  transition:
+    transform var(--transition),
+    box-shadow var(--transition);
+}
+
+.testimonial-card:hover {
+  transform: translateY(-8px);
+
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
+}
+
+.testimonial-card img {
+  display: block;
+
+  width: 100%;
+  height: 420px;
+
+  object-fit: contain;
+
+  background-color: var(--primary-color);
+}
+
+/* =========================
+   CAROUSEL BUTTONS
+========================= */
+
+.carousel-btn {
+  position: absolute;
+
+  z-index: 5;
+
+  width: 45px;
+  height: 45px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border: none;
+
+  border-radius: 50%;
+
+  background-color: var(--accent-color);
+
+  color: var(--primary-color);
+
+  cursor: pointer;
+
+  transition:
+    background-color var(--transition),
+    transform var(--transition);
+}
+
+.carousel-btn:hover {
+  background-color: var(--text-color);
+
+  transform: scale(1.1);
+}
+
+.carousel-prev {
+  left: -22px;
+}
+
+.carousel-next {
+  right: -22px;
+}
+
 /* =========================================================
    TABLET
 ========================================================= */
@@ -476,6 +702,21 @@ textarea:focus {
 
   .form-step {
     padding: 40px;
+  }
+  .testimonial-card {
+    flex: 0 0 calc(50% - 13px);
+  }
+
+  .testimonial-card img {
+    height: 400px;
+  }
+
+  .carousel-prev {
+    left: -15px;
+  }
+
+  .carousel-next {
+    right: -15px;
   }
 }
 
@@ -571,6 +812,39 @@ textarea:focus {
 
     padding: 80px var(--page-padding);
   }
+
+  .testimonials {
+    padding: 70px 20px;
+  }
+
+  .testimonials-header p {
+    font-size: 0.9rem;
+  }
+
+  .testimonials-carousel {
+    margin-top: 40px;
+  }
+
+  .testimonial-card {
+    flex: 0 0 100%;
+  }
+
+  .testimonial-card img {
+    height: 450px;
+  }
+
+  .carousel-btn {
+    width: 40px;
+    height: 40px;
+  }
+
+  .carousel-prev {
+    left: -10px;
+  }
+
+  .carousel-next {
+    right: -10px;
+  }
 }
 
 /* =========================================================
@@ -636,5 +910,16 @@ textarea:focus {
 
   .contact-final h2 {
     font-size: 2.3rem;
+  }
+
+  .testimonial-card img {
+    height: 400px;
+  }
+
+  .carousel-btn {
+    width: 36px;
+    height: 36px;
+
+    font-size: 0.8rem;
   }
 }

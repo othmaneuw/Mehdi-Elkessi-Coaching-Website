@@ -1,44 +1,61 @@
 <!doctype html>
-<html lang="en">
+<html lang="fr">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
     <title>Candidater pour un coaching | Mehdi El Kessi</title>
+
     <link rel="stylesheet" href="./css/variables.css" />
     <link rel="stylesheet" href="./css/global.css" />
     <link rel="stylesheet" href="./css/contact.css" />
     <link rel="stylesheet" href="./css/header.css" />
     <link rel="stylesheet" href="./css/footer.css" />
+
     <script
       src="https://kit.fontawesome.com/d7c1489091.js"
       crossorigin="anonymous"
     ></script>
-    <script src="./js/script.js" defer></script>
-    <script src="./js/contact.js" defer></script>
+
     <script
       type="text/javascript"
       src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"
     ></script>
+
+    <script src="./js/script.js" defer></script>
+    <script src="./js/contact.js" defer></script>
+    <script src="./js/reviews.js" defer></script>
   </head>
+
   <body>
+    <!-- =========================
+         HEADER
+    ========================== -->
+
     <header class="header">
-      <a href="/index.html"><h1>Mehdi El Kessi</h1></a>
-      <button class="menu-toggle" aria-label="Open menu">☰</button>
+      <a href="./index.html">
+        <h1>Mehdi El Kessi</h1>
+      </a>
+
+      <button class="menu-toggle" aria-label="Ouvrir le menu">☰</button>
+
       <nav>
-        <a href="/index.html" class="menu-options">À propos de moi</a>
-        <a href="/coaching.html" class="menu-options">Coaching</a>
-        <a href="/contact.html" class="menu-options">Contact</a>
+        <a href="./index.html" class="menu-options"> À propos de moi </a>
+
+        <a href="./coaching.html" class="menu-options"> Coaching </a>
+
+        <a href="./contact.html" class="menu-options"> Contact </a>
       </nav>
     </header>
 
     <main>
       <!-- =========================
-             INTRODUCTION
-        ========================== -->
+           INTRODUCTION
+      ========================== -->
 
       <section class="contact-hero">
         <div class="contact-hero-content">
-          <span class="section-label">COACHING SUR MESURE</span>
+          <span class="section-label"> COACHING SUR MESURE </span>
 
           <h1>
             PRÊT À
@@ -51,18 +68,18 @@
           </p>
 
           <a href="#questionnaire" class="btn-option">
-            <button>CANDIDATER POUR UN COACHING</button>
+            CANDIDATER POUR UN COACHING
           </a>
         </div>
       </section>
 
       <!-- =========================
-             QUESTIONNAIRE
-        ========================== -->
+           QUESTIONNAIRE
+      ========================== -->
 
       <section class="questionnaire" id="questionnaire">
         <div class="questionnaire-header">
-          <span class="section-label">LE QUESTIONNAIRE</span>
+          <span class="section-label"> LE QUESTIONNAIRE </span>
 
           <h2>
             QUELQUES QUESTIONS.
@@ -73,19 +90,28 @@
             Ces informations me permettent de mieux comprendre ton profil, tes
             objectifs et tes besoins avant notre échange.
           </p>
+          <span class="submitted"
+            >Candidature envoyée, Je vous contacterai bientôt, Merci pour votre
+            confiance</span
+          >
         </div>
 
-        <form id="coaching-form" class="coaching-form">
+        <form id="coaching-form" class="coaching-form" novalidate>
           <!-- =========================
-                     STEP 1
-                ========================== -->
+               STEP 1
+          ========================== -->
 
           <div class="form-step active" data-step="1">
             <div class="step-header">
-              <span class="step-number">01</span>
+              <span class="step-number"> 01 </span>
+
+              <span class="submitted"
+                >Candidature envoyée, Je vous contacterai bientôt, Merci pour
+                votre confiance.</span
+              >
 
               <div>
-                <span class="step-label">INFORMATIONS GÉNÉRALES</span>
+                <span class="step-label"> INFORMATIONS GÉNÉRALES </span>
 
                 <h3>
                   COMMENÇONS PAR<br />
@@ -95,6 +121,8 @@
             </div>
 
             <div class="form-grid">
+              <!-- NAME -->
+
               <div class="form-group">
                 <label for="name"> Nom / Prénom </label>
 
@@ -105,7 +133,11 @@
                   placeholder="Ton nom et prénom"
                   required
                 />
+
+                <span class="field-error"> Ce champ est obligatoire. </span>
               </div>
+
+              <!-- PHONE -->
 
               <div class="form-group">
                 <label for="phone"> N° de téléphone </label>
@@ -116,8 +148,13 @@
                   name="phone"
                   placeholder="Ton numéro de téléphone"
                   required
+                  pattern="^(?:\+?\d[\d\s]{7,18}\d)$"
                 />
+
+                <span class="field-error"> Ce champ est obligatoire. </span>
               </div>
+
+              <!-- EMAIL -->
 
               <div class="form-group full-width">
                 <label for="email"> Email </label>
@@ -127,8 +164,13 @@
                   id="email"
                   name="email"
                   placeholder="Ton adresse email"
+                  pattern="^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9-]+(\.[a-zA-Z0-9-]+)+$"
                   required
                 />
+
+                <span class="field-error">
+                  Veuillez saisir une adresse e-mail valide.
+                </span>
               </div>
             </div>
 
@@ -143,15 +185,15 @@
           </div>
 
           <!-- =========================
-                     STEP 2
-                ========================== -->
+               STEP 2
+          ========================== -->
 
           <div class="form-step" data-step="2">
             <div class="step-header">
-              <span class="step-number">02</span>
+              <span class="step-number"> 02 </span>
 
               <div>
-                <span class="step-label">TON PROFIL</span>
+                <span class="step-label"> TON PROFIL </span>
 
                 <h3>
                   COMPRENDRE TON<br />
@@ -161,6 +203,8 @@
             </div>
 
             <div class="form-fields">
+              <!-- QUESTION 1 -->
+
               <div class="form-group">
                 <label for="objective">
                   1. Quel est ton objectif principal actuellement ?
@@ -172,7 +216,11 @@
                   placeholder="Décris ton objectif principal..."
                   required
                 ></textarea>
+
+                <span class="field-error"> Ce champ est obligatoire. </span>
               </div>
+
+              <!-- QUESTION 2 -->
 
               <div class="form-group">
                 <label for="training">
@@ -185,7 +233,11 @@
                   placeholder="Décris ton entraînement actuel..."
                   required
                 ></textarea>
+
+                <span class="field-error"> Ce champ est obligatoire. </span>
               </div>
+
+              <!-- QUESTION 3 -->
 
               <div class="form-group">
                 <label for="sessions">
@@ -200,7 +252,13 @@
                   placeholder="Ex : 4"
                   required
                 />
+
+                <span class="field-error">
+                  Indique le nombre de séances que tu réalises par semaine.
+                </span>
               </div>
+
+              <!-- QUESTION 4 -->
 
               <div class="form-group">
                 <label for="concrete-goal">
@@ -213,6 +271,8 @@
                   placeholder="Décris le résultat que tu souhaites atteindre..."
                   required
                 ></textarea>
+
+                <span class="field-error"> Ce champ est obligatoire. </span>
               </div>
             </div>
 
@@ -229,15 +289,15 @@
           </div>
 
           <!-- =========================
-                     STEP 3
-                ========================== -->
+               STEP 3
+          ========================== -->
 
           <div class="form-step" data-step="3">
             <div class="step-header">
-              <span class="step-number">03</span>
+              <span class="step-number"> 03 </span>
 
               <div>
-                <span class="step-label">TON ENGAGEMENT</span>
+                <span class="step-label"> TON ENGAGEMENT </span>
 
                 <h3>
                   ALLER PLUS LOIN<br />
@@ -247,6 +307,8 @@
             </div>
 
             <div class="form-fields">
+              <!-- QUESTION 5 -->
+
               <div class="form-group">
                 <label for="limits">
                   5. Quelles sont aujourd’hui les principales limites qui
@@ -259,7 +321,11 @@
                   placeholder="Parle-moi de tes principales difficultés..."
                   required
                 ></textarea>
+
+                <span class="field-error"> Ce champ est obligatoire. </span>
               </div>
+
+              <!-- QUESTION 6 -->
 
               <div class="form-group">
                 <label for="why-coaching">
@@ -273,7 +339,11 @@
                   placeholder="Pourquoi souhaites-tu être accompagné(e) ?"
                   required
                 ></textarea>
+
+                <span class="field-error"> Ce champ est obligatoire. </span>
               </div>
+
+              <!-- QUESTION 7 -->
 
               <div class="form-group">
                 <label>
@@ -289,15 +359,23 @@
                       value="Oui"
                       required
                     />
-                    <span>OUI</span>
+
+                    <span> OUI </span>
                   </label>
 
                   <label class="radio-option">
                     <input type="radio" name="commitment" value="Non" />
-                    <span>NON</span>
+
+                    <span> NON </span>
                   </label>
                 </div>
+
+                <span class="field-error">
+                  Merci de sélectionner une réponse.
+                </span>
               </div>
+
+              <!-- QUESTION 8 -->
 
               <div class="form-group">
                 <label>
@@ -309,14 +387,20 @@
                 <div class="radio-options">
                   <label class="radio-option">
                     <input type="radio" name="call" value="Oui" required />
-                    <span>OUI</span>
+
+                    <span> OUI </span>
                   </label>
 
                   <label class="radio-option">
                     <input type="radio" name="call" value="Non" />
-                    <span>NON</span>
+
+                    <span> NON </span>
                   </label>
                 </div>
+
+                <span class="field-error">
+                  Merci de sélectionner une réponse.
+                </span>
               </div>
             </div>
 
@@ -335,12 +419,12 @@
       </section>
 
       <!-- =========================
-             FINAL CTA
-        ========================== -->
+           FINAL CTA
+      ========================== -->
 
       <section class="contact-final">
         <div class="contact-final-content">
-          <span class="section-label">TON OBJECTIF</span>
+          <span class="section-label"> TON OBJECTIF </span>
 
           <h2>
             PRÊT À PASSER<br />
@@ -353,7 +437,124 @@
           </p>
         </div>
       </section>
+
+      <!-- =========================
+           TESTIMONIALS
+      ========================== -->
+
+      <section class="testimonials">
+        <div class="testimonials-header">
+          <span class="section-label"> TÉMOIGNAGES </span>
+
+          <h2>ILS EN PARLENT</h2>
+
+          <p>
+            Découvrez les retours de personnes que j'ai accompagnées dans leur
+            parcours.
+          </p>
+        </div>
+
+        <div class="testimonials-carousel">
+          <button
+            class="carousel-btn carousel-prev"
+            aria-label="Avis précédent"
+          >
+            <i class="fa-solid fa-chevron-left"></i>
+          </button>
+
+          <div class="testimonials-track">
+            <div class="testimonial-card">
+              <img src="./imgs/temoignages/oth.png" alt="Avis client Google" />
+            </div>
+
+            <div class="testimonial-card">
+              <img
+                src="./imgs/temoignages/Gaetan.png"
+                alt="Avis client Google"
+              />
+            </div>
+
+            <div class="testimonial-card">
+              <img
+                src="./imgs/temoignages/ghalia bennis.png"
+                alt="Avis client Google"
+              />
+            </div>
+
+            <div class="testimonial-card">
+              <img
+                src="./imgs/temoignages/Audrey Durand.png"
+                alt="Avis client Google"
+              />
+            </div>
+
+            <div class="testimonial-card">
+              <img
+                src="./imgs/temoignages/Axelle Mayonove.png"
+                alt="Avis client Google"
+              />
+            </div>
+
+            <div class="testimonial-card">
+              <img
+                src="./imgs/temoignages/Mathis garde.png"
+                alt="Avis client Google"
+              />
+            </div>
+
+            <div class="testimonial-card">
+              <img
+                src="./imgs/temoignages/Noe Cerisier.png"
+                alt="Avis client Google"
+              />
+            </div>
+
+            <div class="testimonial-card">
+              <img
+                src="./imgs/temoignages/Audric Atoon.png"
+                alt="Avis client Google"
+              />
+            </div>
+
+            <div class="testimonial-card">
+              <img
+                src="./imgs/temoignages/Favreau Elise.png"
+                alt="Avis client Google"
+              />
+            </div>
+
+            <div class="testimonial-card">
+              <img
+                src="./imgs/temoignages/Lina mel.png"
+                alt="Avis client Google"
+              />
+            </div>
+
+            <div class="testimonial-card">
+              <img
+                src="./imgs/temoignages/Sandra Portugal.png"
+                alt="Avis client Google"
+              />
+            </div>
+
+            <div class="testimonial-card">
+              <img
+                src="./imgs/temoignages/Melissa Sanchez.png"
+                alt="Avis client Google"
+              />
+            </div>
+          </div>
+
+          <button class="carousel-btn carousel-next" aria-label="Avis suivant">
+            <i class="fa-solid fa-chevron-right"></i>
+          </button>
+        </div>
+      </section>
     </main>
+
+    <!-- =========================
+         FOOTER
+    ========================== -->
 
     <footer>
       <a href="./index.html" class="footer-title"> Mehdi El Kessi </a>
@@ -367,6 +568,7 @@
 
         <div class="social-links">
           <!-- Instagram -->
+
           <a
             href="https://www.instagram.com/m.elkessi/"
             target="_blank"
@@ -388,6 +590,7 @@
           </a>
 
           <!-- WhatsApp -->
+
           <a
             href="https://wa.me/33786426047"
             target="_blank"

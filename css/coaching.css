@@ -9,13 +9,10 @@
 
 .coaching-hero {
     min-height: 600px;
-
     display: flex;
     align-items: center;
     justify-content: center;
-
     padding: 100px var(--page-padding);
-
     text-align: center;
 
     background-image:
@@ -23,7 +20,7 @@
             rgba(16, 17, 20, 0.65),
             rgba(16, 17, 20, 0.9)
         ),
-        url("../imgs/76ABF973-F4B2-43BF-BB55-C30B4536919A.JPG");
+        url("../imgs/mehdi8.JPG");
 
     background-size: cover;
     background-position: center;
@@ -36,7 +33,6 @@
 
 .section-label {
     display: block;
-
     margin-bottom: 25px;
 
     color: var(--accent-color);
@@ -57,7 +53,6 @@
 
 .hero-intro {
     max-width: 750px;
-
     margin: 35px auto 0;
 
     font-family: "Montserrat", sans-serif;
@@ -67,19 +62,86 @@
 
 
 /* =========================================================
+   CTA BUTTON
+========================================================= */
+
+.btn-option {
+    display: inline-block;
+
+    margin-top: 40px;
+    padding: 14px 30px;
+
+    border: none;
+    outline: none;
+    border-radius: 3px;
+
+    background-color: var(--secondary-color);
+    color: var(--text-color);
+
+    font-family: inherit;
+    font-size: 1rem;
+
+    text-decoration: none;
+    cursor: pointer;
+
+    transition:
+        background-color var(--transition),
+        color var(--transition),
+        transform var(--transition);
+}
+
+.btn-option:hover {
+    background-color: var(--accent-color);
+    color: var(--primary-color);
+
+    transform: translateY(-3px);
+}
+
+.coaching-intro .btn-option{
+    display: inline-block;
+
+    margin-top: 40px;
+    padding: 14px 30px;
+
+    border: none;
+    outline: none;
+    border-radius: 3px;
+
+    background-color: var(--primary-color);
+    color: var(--text-color);
+
+    font-family: inherit;
+    font-size: 1rem;
+
+    text-decoration: none;
+    cursor: pointer;
+
+    transition:
+        background-color var(--transition),
+        color var(--transition),
+        transform var(--transition);
+}
+
+.coaching-intro .btn-option:hover{
+    background-color: var(--accent-color);
+    color: var(--primary-color);
+
+    transform: translateY(-3px);
+}
+
+
+/* =========================================================
    INTRODUCTION
 ========================================================= */
 
 .coaching-intro {
     padding: 120px var(--page-padding);
-
     background-color: var(--secondary-color);
 }
 
 .intro-content {
     max-width: 1100px;
     margin: 0 auto;
-
     text-align: center;
 }
 
@@ -117,14 +179,12 @@
 
 .experience {
     padding: 120px var(--page-padding);
-
     background-color: var(--background-color);
 }
 
 .experience-header {
     max-width: 1000px;
     margin: 0 auto;
-
     text-align: center;
 }
 
@@ -144,12 +204,10 @@
 
 .experience-grid {
     max-width: 1200px;
-
     margin: 70px auto 0;
 
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-
     gap: 25px;
 }
 
@@ -164,7 +222,6 @@
     background-color: var(--primary-color);
 
     border-radius: var(--border-radius);
-
     border: 1px solid rgba(249, 249, 249, 0.05);
 
     transition:
@@ -174,7 +231,6 @@
 
 .experience-card:hover {
     transform: translateY(-8px);
-
     background-color: var(--secondary-color);
 }
 
@@ -192,7 +248,6 @@
 
 .experience-card h3 {
     max-width: 500px;
-
     margin-bottom: 25px;
 
     color: var(--accent-color);
@@ -204,11 +259,22 @@
 .experience-card p {
     margin-top: auto;
 
+    color: var(--text-color);
+
     font-family: "Montserrat", sans-serif;
     font-size: 0.95rem;
     line-height: 1.8;
+}
 
-    color: var(--text-color);
+
+/* =========================================================
+   EXPERIENCE CTA
+========================================================= */
+
+.experience > .btn-option {
+    display: block;
+    width: fit-content;
+    margin: 50px auto 0;
 }
 
 
@@ -232,7 +298,7 @@
             rgba(16, 17, 20, 0.75),
             rgba(16, 17, 20, 0.92)
         ),
-        url("../imgs/76ABF973-F4B2-43BF-BB55-C30B4536919A.JPG");
+        url("../imgs/mehdi4.JPG");
 
     background-size: cover;
     background-position: center;
@@ -255,7 +321,6 @@
 
 .final-content p {
     max-width: 750px;
-
     margin: 0 auto 30px;
 
     font-family: "Montserrat", sans-serif;
@@ -271,43 +336,11 @@
 }
 
 .final-content .btn-option {
-    display: inline-block;
-
     margin-top: 25px;
 }
 
 .final-content a {
     color: var(--text-color);
-}
-
-.final-content button{
-   border: none;
-  outline: none;
-
-  padding: 14px 30px;
-
-  background-color: var(--secondary-color);
-  color: var(--text-color);
-
-  border-radius: 3px;
-
-  font-family: inherit;
-  font-size: 1rem;
-
-  cursor: pointer;
-
-  transition:
-    background-color var(--transition),
-    color var(--transition),
-    transform var(--transition);
-  
-}
-
-.final-content button:hover{
-     background-color: var(--accent-color);
-  color: var(--primary-color);
-
-  transform: translateY(-3px);
 }
 
 
@@ -347,11 +380,11 @@
 
 @media (max-width: 768px) {
 
+    /* HERO */
+
     .coaching-hero {
         min-height: 500px;
-
         padding: 80px var(--page-padding);
-
         background-position: center;
     }
 
@@ -361,12 +394,11 @@
 
     .hero-intro {
         margin-top: 25px;
-
         font-size: 0.95rem;
     }
 
 
-    /* Introduction */
+    /* INTRODUCTION */
 
     .coaching-intro {
         padding: 70px var(--page-padding);
@@ -386,7 +418,7 @@
     }
 
 
-    /* Experience */
+    /* EXPERIENCE */
 
     .experience {
         padding: 70px var(--page-padding);
@@ -398,28 +430,29 @@
 
     .experience-grid {
         grid-template-columns: 1fr;
-
         margin-top: 45px;
     }
 
     .experience-card {
         min-height: auto;
-
         padding: 30px;
     }
 
     .experience-card p {
         margin-top: 0;
-
         font-size: 0.9rem;
     }
 
+    .experience > .btn-option {
+        width: 100%;
+        text-align: center;
+    }
 
-    /* Final */
+
+    /* FINAL */
 
     .coaching-final {
         min-height: 600px;
-
         padding: 80px var(--page-padding);
     }
 
@@ -433,6 +466,7 @@
 
     .final-content .btn-option {
         width: 100%;
+        text-align: center;
     }
 }
 
@@ -468,5 +502,11 @@
     .coaching-final {
         min-height: 550px;
     }
+
+    .btn-option {
+        font-size: 0.9rem;
+        padding: 13px 22px;
+    }
 }
+
 
